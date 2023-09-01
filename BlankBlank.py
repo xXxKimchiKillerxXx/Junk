@@ -3,11 +3,11 @@ import re
 i = 0
 
 #파일 실행(문장) / File execution(Sentences)
-a = open('C:/Users/jsbjs/Desktop/코딩코/a.txt', 'r', encoding='UTF-8')
+a = open('Your file A goes here.', 'r', encoding='UTF-8')
 a_line = a.readlines()
 
 #파일 실행(단어) / File execution(Words)
-b = open('C:/Users/jsbjs/Desktop/코딩코/b.txt', 'r', encoding='UTF-8')
+b = open('Your file B goes here.', 'r', encoding='UTF-8')
 b_line = b.readlines()
 
 #정규표현식 한 묶음으로 / Regular expression as a group of words
