@@ -1,2 +1,3 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#You need two text files. File a is the sentences, b is the keywords.
+#Then, copy the address.
+#Paste it to lines 6 and 10 respectively.
