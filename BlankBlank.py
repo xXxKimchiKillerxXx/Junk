@@ -1,8 +1,8 @@
 import re
 
-# Open the files
-a = open('C:/Users/jsbjs/Desktop/코딩코/a.txt', 'r', encoding='UTF-8')
-b = open('C:/Users/jsbjs/Desktop/코딩코/b.txt', 'r', encoding='UTF-8')
+# Open the files (Must replace the backslash with a normal one!)
+a = open('Address of file a', 'r', encoding='UTF-8')
+b = open('Address of file b', 'r', encoding='UTF-8')
 
 # Read the lines from the files
 a_lines = a.readlines()
