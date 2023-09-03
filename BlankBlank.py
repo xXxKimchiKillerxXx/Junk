@@ -15,15 +15,7 @@ while i < len(a_lines):
     words = re.findall(r'\w+', a_lines[i])
     chars = re.findall(r'\W+', a_lines[i])
 
-    end = chars[-1]
-    escape = '. +'
-    p = re.compile(escape)
-    q = p.search(escape)
-    chars.remove(end)
-    chars.append(q.group())
-
     print('\n\n')
-
     if re.match('\w', a_lines[i][0]):
         for j in range(len(words)):
             if words[j] in keywords:
@@ -40,20 +32,22 @@ while i < len(a_lines):
                     print('___', end = '')
                 else:
                     print(words[j], end = '')
-
+    if j == len(a_lines) - 1:
+        print('\n', end = '')
     guess = input('\n\n\nMake a guess: ')
 
     if guess in keywords:
         keywords.remove(guess)
         if len(keywords) == 0:
             print('\n\n' + a_lines[i], end = '')
+            if i == len(a_lines) - 1:
+                print('\n', end = '')
             print(f'\n\n[Line {i + 1} of {len(a_lines)} complete]', end = '')
             i += 1
             if i < len(a_lines):
                 keywords = re.findall(r'\w+', b_lines[i])
     else:
         print('\n\nTry again.', end = '')
-
 
 # Close the files
 a.close()
